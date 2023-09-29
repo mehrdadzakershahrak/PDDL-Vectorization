@@ -1,0 +1,23 @@
+name: Sample Scenario 1
+
+tokenization:
+  strategy: WhitespaceTokenizer
+
+encoding:
+  vocabulary: ['define', 'domain', 'problem', 'action', 'precondition', 'effect', ':', '(', ')', ...]
+  unknown_token: "<UNK>"
+
+decoding:
+  max_length: 50
+
+search_strategy:
+  name: BasicSearch
+  parameters:
+    max_iterations: 1000
+    threshold: 0.5
+
+evaluation:
+  metric: SimplePlanScore
+
+optimization:
+  refinement_strategy: BasicRefinement

@@ -1,7 +1,10 @@
+from tokenizers import WhitespaceTokenizer
+
 class PDDLDecoder:
-    def __init__(self):
-        # Initialization code, if any
-        pass
+    def __init__(self, vocabulary, tokenizer=None):
+        self.vocabulary = vocabulary
+        self.id_to_token = {idx: token for idx, token in enumerate(vocabulary)}
+        self.tokenizer = tokenizer or WhitespaceTokenizer()
 
     def decode(self, vector_representation):
         """
@@ -13,6 +16,6 @@ class PDDLDecoder:
         Returns:
         - str: The decoded PDDL description.
         """
-        # Placeholder code
-        pddl_text = ""
+        tokens = [self.id_to_token.get(idx, "<UNK>") for idx in vector_representation]
+        pddl_text = self.tokenizer.detokenize(tokens)
         return pddl_text
