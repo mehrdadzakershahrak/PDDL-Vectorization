@@ -4,22 +4,23 @@ This project focuses on encoding PDDL (Planning Domain Definition Language) text
 
 ## Project Structure
 
-PDDL-Vectorization/
-|-- run_experiment.py (Main execution script)
-|-- scenarios/ (Contains YAML scenario setup files)
-|-- src/
-| |-- encoder/ (Encoder implementations)
-| |-- decoder/ (Decoder implementations)
-| |-- utils/ (Utility functions and classes)
-| | |-- scenario_utils.py (Scenario setup and validation)
-| | |-- logger_config.py (Logging configurations)
-| |-- data_handling/ (Data processing and augmentation)
-| | |-- pddl_parser.py (PDDL structure extraction)
-| | |-- augmenters.py (Data augmentation techniques)
-| |-- evaluation/ (Performance metrics and evaluations)
-| | |-- metrics.py (Evaluation metrics)
-| |-- problem_generators/ (Domain-specific problem generators)
-| | |-- rover_domain.py (Rover domain problem generator)
+- `PDDL-Vectorization/`
+  - `run_experiment.py`: Main execution script
+  - `scenarios/`: Contains YAML scenario setup files
+  - `src/`
+    - `encoder/`: Encoder implementations
+    - `decoder/`: Decoder implementations
+    - `utils/`: Utility functions and classes
+      - `scenario_utils.py`: Scenario setup and validation
+      - `logger_config.py`: Logging configurations
+    - `data_handling/`: Data processing and augmentation
+      - `pddl_parser.py`: PDDL structure extraction
+      - `augmenters.py`: Data augmentation techniques
+    - `evaluation/`: Performance metrics and evaluations
+      - `metrics.py`: Evaluation metrics
+    - `problem_generators/`: Domain-specific problem generators
+      - `rover_domain.py`: Rover domain problem generator
+
 
 
 ## Features
